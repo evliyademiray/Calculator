@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Harcama Hesaplayıcı</h1>
+    <div class="container">
+        <!-- Karşılama metni -->
+        <h3 class="greet">
+            <span>Hoşgeldiniz,</span>
+            <input id="user-inp" type="text" placeholder="İsminizi Giriniz...">
+        </h3>
+
+        <!-- Form alanı -->
+        <form>
+            <!-- form Üst kısım -->
+            <div class="double">
+                <div class="form-field">
+                    <label>Harcama:</label>
+                    <input id="title-inp" type="text">
+                </div>
+                <div class="form-field">
+                    <label>Fiyat:</label>
+                    <input id="price-inp" type="number">
+                </div>
+            </div>
+            <!-- Form Alt kısım -->
+            <div class="double">
+                <div class="fonm-check-field">
+                    <input type="checkbox" id="checked">
+                    <label for="checked">Ödendi</label>
+                </div>
+                <button id="add-btn">Ekle</button>
+            </div>
+        </form>
+        <!-- Toplam Alanı -->
+        <div class="sum">
+            Toplam Harcama <span id="price-info">0</span> &#8378;
+        </div>
+        <!-- Filtreleme Alanı -->
+        <select>
+            <option value="all">Hepsi</option>
+            <option value="paid">Ödenenler</option>
+            <option value="not-paid">Ödenmeyenler</option>
+        </select>
+        <!-- Harcama Listesi -->
+        <div id="list"></div>
+    </div>
+
+    <!-- JS bağlatı kodu -->
+    <script src="main.js"></script>
+</body>
+
+</html>
